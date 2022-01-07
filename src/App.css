@@ -1,5 +1,33 @@
 .App {
   text-align: center;
+
+}
+
+.search-homepage{
+  height: 100vh;
+  background-image: url("./assets/images/background.jpg");
+  /*filter: brightness(0.6);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-container {
+  /*height: 400px;*/
+}
+.search-container{
+  max-width: 800px;
+  flex: 1;
+  filter: brightness(1);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.search-input{
+  background: white;
+  width: 100%;
+}
+.mapboxgl-map{
+  height: 100vh;
 }
 
 .App-logo {
@@ -10,29 +38,5 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

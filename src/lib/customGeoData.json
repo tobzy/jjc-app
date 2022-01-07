@@ -1,0 +1,259 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 9:51",
+        "Name of point": "Mai Suya",
+        "Description of point": "Suya spot",
+        "Phone Number": "",
+        "State ": "Federal Capital Territory",
+        "Color code": "Orange - Could be moved at any point",
+        "Keywords": "Suya, Suya pepper, chicken Suya, masa, Kebab, grub, munchies, massa "
+      },
+      "geometry": {
+        "coordinates": [
+          7.391531,
+          9.128419
+        ],
+        "type": "Point"
+      },
+      "id": "05f8ee6732b4ead17c14146e5c883c0d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 8:05",
+        "Name of point": "Rasadot laundry & dry cleaning ",
+        "Description of point": "Laundry services ",
+        "Phone Number": "(234)8055647741",
+        "State ": "Federal Capital Territory",
+        "Color code": "Light Green - Slightly stable (likely to be seen but likely rented)",
+        "Keywords": "Dry cleaning, laundry, wash, clothes, "
+      },
+      "geometry": {
+        "coordinates": [
+          7.391692,
+          9.128363
+        ],
+        "type": "Point"
+      },
+      "id": "26702f83743a323e88e8598e5e018c75"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/11/2021 20:08",
+        "Name of point": "Emsywise phamarcy and stores",
+        "Description of point": "A pharmacy and supermarket",
+        "Phone Number": "(234)8063639397",
+        "State ": "Edo State ",
+        "Color code": "Dark Green - Stable (Very likely to be seen,)",
+        "Keywords": "Drugs, condoms, wine, sanitary pads,  body cream, body spray, medicine, pharmacy, contraceptives, postinor, paracetamol, panadol, blood test, cosmetics, perfumes."
+      },
+      "geometry": {
+        "coordinates": [
+          5.621646,
+          6.409803
+        ],
+        "type": "Point"
+      },
+      "id": "2ba832098f413b6e4d20a18ba4df45bc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 8:15",
+        "Name of point": "NN empire ",
+        "Description of point": "Cosmetics, Accessories, skincare products",
+        "Phone Number": "(234)8021261316",
+        "State ": "Federal Capital Territory",
+        "Color code": "Light Green - Slightly stable (likely to be seen but likely rented)",
+        "Keywords": "Hair products, nails, skin products, skin glow, cream, skin oil, "
+      },
+      "geometry": {
+        "coordinates": [
+          7.391692,
+          9.128363
+        ],
+        "type": "Point"
+      },
+      "id": "42076b557f1af731ee600cbb31513588"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 8:46",
+        "Name of point": "Eze and Sons investment ",
+        "Description of point": "Building materials. ",
+        "Phone Number": "(234)8022450104",
+        "State ": "Federal Capital Territory",
+        "Color code": "Light Green - Slightly stable (likely to be seen but likely rented)",
+        "Keywords": "Paint, plumbing, hammer, screws, roller, tank, nails, pipes, brush, scrapper, hinge, rubber, cement, "
+      },
+      "geometry": {
+        "coordinates": [
+          7.391056,
+          9.128871
+        ],
+        "type": "Point"
+      },
+      "id": "4b322dba0fdfc9af2cf2cdf51f7d0a4d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 7:55",
+        "Name of point": "Legendary barbing saloon",
+        "Description of point": "Barbershop ",
+        "Phone Number": "(234)8137242372",
+        "State ": "Federal Capital Territory",
+        "Color code": "Light Green - Slightly stable (likely to be seen but likely rented)",
+        "Keywords": "Barbing, barber, haircut, shaving, saloon, ",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            "myImage"
+          ],
+          [
+            "image",
+            "mountain"
+          ]
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          7.387809,
+          9.129966
+        ],
+        "type": "Point"
+      },
+      "id": "5c193e9a8347da32b03aecd505f5d536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 8:22",
+        "Name of point": "Elyn laboratory ",
+        "Description of point": "Medical laboratory test",
+        "Phone Number": "(234)8030750990",
+        "State ": "Federal Capital Territory",
+        "Color code": "Light Green - Slightly stable (likely to be seen but likely rented)",
+        "Keywords": "Lab test, infection test, malaria test, blood test, genotype test, clinic test, "
+      },
+      "geometry": {
+        "coordinates": [
+          7.390329,
+          9.129212
+        ],
+        "type": "Point"
+      },
+      "id": "9c909ea10effdfee840547920eb8fd22"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 8:25",
+        "Name of point": "JSP computer World ",
+        "Description of point": "Cybercafe business center",
+        "Phone Number": "(234)7038508631",
+        "State ": "Federal Capital Territory",
+        "Color code": "Light Green - Slightly stable (likely to be seen but likely rented)",
+        "Keywords": "Photocopy, computer, typeset, printing, cyber cafe, passport, photograph, graphic design, Scanning, browsing"
+      },
+      "geometry": {
+        "coordinates": [
+          7.390352,
+          9.129195
+        ],
+        "type": "Point"
+      },
+      "id": "ab70df964522cd85c731143ef5889116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 8:08",
+        "Name of point": "Sanico furnitures",
+        "Description of point": "Carpenter and furniture workshop ",
+        "Phone Number": "(234)7036044640",
+        "State ": "Federal Capital Territory",
+        "Color code": "Purple - Unstable but still a fair chance of being seen_",
+        "Keywords": "Wardrobe, furniture, carpenter, wood, sofa, cushions, table, Carbinet, bed frame, "
+      },
+      "geometry": {
+        "coordinates": [
+          7.391692,
+          9.128363
+        ],
+        "type": "Point"
+      },
+      "id": "c26ed288b1900d7edee5955f2ba6c119"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 7:58",
+        "Name of point": "Oceanik services",
+        "Description of point": "POS shop ",
+        "Phone Number": "(234)8145775130",
+        "State ": "Federal Capital Territory",
+        "Color code": "Light Green - Slightly stable (likely to be seen but likely rented)",
+        "Keywords": "POS, cash, withdraw, Transfer, deposit, money, "
+      },
+      "geometry": {
+        "coordinates": [
+          7.391692,
+          9.128363
+        ],
+        "type": "Point"
+      },
+      "id": "e1e9521fd8eec08827b31c231aa7a944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 8:02",
+        "Color code": "Light Green - Slightly stable (likely to be seen but likely rented)",
+        "Keywords": "Gas, filling gas, cylinder, gas burner, Gas cooker, ",
+        "Description of point": "Gas filling station and Cylinder sales",
+        "marker-symbol": "marker-blue",
+        "State ": "Federal Capital Territory",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "Phone Number": "(234)8165024148",
+        "Name of point": "Nnamdi unwa KC gas"
+      },
+      "geometry": {
+        "coordinates": [
+          7.391692,
+          9.128363
+        ],
+        "type": "Point"
+      },
+      "id": "e9fef11b8a2fa4874d135c0f65d4fd20"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Submission Date": "12/12/2021 8:41",
+        "Name of point": "Ifeanyi Stores",
+        "Description of point": "Foodstuff Shop ",
+        "Phone Number": "(234)8084201839",
+        "State ": "Federal Capital Territory",
+        "Color code": "Light Green - Slightly stable (likely to be seen but likely rented)",
+        "Keywords": "Foodstuffs, pepper, onions, meat, tomatoes, yam, fish, groundnut oil, egusi, Garri, beans, rice, curry, red oil, raw food"
+      },
+      "geometry": {
+        "coordinates": [
+          7.391056,
+          9.128871
+        ],
+        "type": "Point"
+      },
+      "id": "f15822eef50d1e79e7c5f457c7fc8923"
+    }
+  ],
+  "type": "FeatureCollection"
+}
