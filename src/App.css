@@ -21,6 +21,18 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+.search-box-container{
+  position: absolute;
+  top: 10px;
+  z-index: 9;
+}
+.map-search-container{
+  max-width: 400px;
+  flex: 1;
+  filter: brightness(1);
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .search-input{
   background: white;
@@ -30,10 +42,23 @@
   height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.popup-title{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
 }
+
+.popup-description{
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/*.MuiButton-outlinedPrimary {*/
+/*  text-transform: none;*/
+/*}*/
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

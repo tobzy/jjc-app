@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App"><Router>
       <Routes>
-        <Route path="/search"   element={ <SearchMap/>}/>
+        <Route path="/search"   element={ <SearchMap lng={lng} lat={lat}/>}/>
         <Route path="/" element={<Home/>} />
       </Routes>
     </Router>
