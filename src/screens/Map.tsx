@@ -135,9 +135,9 @@ function SearchMap() {
       mapRef?.removeControl(directionsRef);
     }
     mapRef?.addControl(directionsRef, 'top-right');
-    console.log(currentLocation)
     directionsRef.setOrigin(currentLocation)
     directionsRef.setDestination([feature?.location.longitude,feature?.location.latitude]);
+    setSelectedFeature(undefined);
 
   }
   return (
