@@ -12,8 +12,8 @@ function App() {
 
   const mapContainer = useRef(null)
   const map = useRef(null);
-  const [lng, setLng] = useState(-70.9);
-  const [lat, setLat] = useState(42.35);
+  const [lng, setLng] = useState(3.909892);
+  const [lat, setLat] = useState(7.436598);
 
   useEffect(() => {
     getLocation();
@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App"><Router>
       <Routes>
-        <Route path="/search"   element={ <SearchMap lng={lng} lat={lat}/>}/>
+        <Route path="/search"   element={ <SearchMap />}/>
         <Route path="/" element={<Home/>} />
       </Routes>
     </Router>

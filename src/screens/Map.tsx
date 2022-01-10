@@ -5,6 +5,7 @@ import {MapService} from "../services/map-service";
 import styled from 'styled-components';
 import {getIcon} from "../lib/utils";
 import Button from '@material-ui/core/Button';
+// @ts-ignore
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 
 const accessToken = 'pk.eyJ1IjoiampjLWRldiIsImEiOiJja3d1ZDQ5OTQxbTVrMm9ydHZ5OWExaW1qIn0.I6DlyCqTnk-Plz6r--IsyA';
@@ -41,25 +42,36 @@ const Map = ReactMapboxGl({
   accessToken
 });
 
-function SearchMap({lng = 3.909892, lat=7.436598}:{lng:number, lat:number}) {
+function SearchMap() {
 
   const mapContainer = useRef(null)
   const [zoom, setZoom] = useState<[number]>([11]);
   const [mapRef, setMapRef] = useState<any>(undefined);
   const [directionsRef, setDirectionsRef] = useState<any>(undefined);
   const [fitBounds, setFitBounds] = useState(undefined);
-  const [center, setCenter] = useState<[number, number]>([3.909892, 7.436598]);
+  const [center, setCenter] = useState<[number, number] | undefined>();
+  const [currentLocation, setCurrentLocation] = useState<[number, number] | undefined>();
   const [searchedMapFeatures, setSearchedMapFeatures] = useState<any[]>([]);
   const [selectedFeature, setSelectedFeature] = useState<any>(undefined);
   const urlQuery = new URL(window.location.href).searchParams.get('q');
 
-  useEffect(()=>{
-    setCenter([lng,lat])
-  },[lng,lat]);
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      console.log('Geolocation is not supported by this browser.')
+    }
+  }
+  const showPosition = (position:GeolocationPosition) =>{
+    // console.log([position.coords.latitude, position.coords.longitude])
+    setCenter([position.coords.longitude, position.coords.latitude])
+    setCurrentLocation([position.coords.longitude, position.coords.latitude])
+  }
 
   useEffect(()=>{
+    getLocation();
+  },[]);
 
-  },[])
   useEffect(()=>{
     urlQuery && fetchMapFeatures(urlQuery)
   },[urlQuery]);
@@ -98,18 +110,17 @@ function SearchMap({lng = 3.909892, lat=7.436598}:{lng:number, lat:number}) {
     }
   }
 
-  const onStyleLoad = (map) => {
+  const onStyleLoad = (map:any) => {
     setMapRef(map);
     const directions = new MapboxDirections({
       accessToken,
       unit: 'metric',
-      profile: 'mapbox/driving',
+      profile: 'mapbox/walking',
       interactive: false,
-      congestion: true,
-      parameters:{steps:true},
       controls: {
-        inputs:false,
-        instructions:true
+        inputs:true,
+        instructions:true,
+        profileSwitcher:true,
       },
     });
     setDirectionsRef(directions);
@@ -119,12 +130,15 @@ function SearchMap({lng = 3.909892, lat=7.436598}:{lng:number, lat:number}) {
   const showDirections = (feature:any) => {
     // Integrates directions control with map
 
-    if(directionsRef?.getDestination()?.geometry) return;
+    if(directionsRef?.getDestination()?.geometry){
+      directionsRef?.removeRoutes();
+      mapRef?.removeControl(directionsRef);
+    }
     mapRef?.addControl(directionsRef, 'top-right');
-    directionsRef.setOrigin([3.909892, 7.436598])
+    console.log(currentLocation)
+    directionsRef.setOrigin(currentLocation)
     directionsRef.setDestination([feature?.location.longitude,feature?.location.latitude]);
 
-    console.log(mapRef)
   }
   return (
     <div className="App" id='map_Container'>
