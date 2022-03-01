@@ -7,6 +7,8 @@ import {getIcon} from "../lib/utils";
 import Button from '@material-ui/core/Button';
 // @ts-ignore
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
+import logo from "../assets/images/icon.png";
+import {useNavigate} from "react-router-dom";
 
 const accessToken = 'pk.eyJ1IjoiampjLWRldiIsImEiOiJja3d1ZDQ5OTQxbTVrMm9ydHZ5OWExaW1qIn0.I6DlyCqTnk-Plz6r--IsyA';
 const flyToOptions = {
@@ -54,6 +56,8 @@ function SearchMap() {
   const [searchedMapFeatures, setSearchedMapFeatures] = useState<any[]>([]);
   const [selectedFeature, setSelectedFeature] = useState<any>(undefined);
   const urlQuery = new URL(window.location.href).searchParams.get('q');
+  let navigate = useNavigate();
+
 
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -142,6 +146,7 @@ function SearchMap() {
   }
   return (
     <div className="App" id='map_Container'>
+      <LogoImage src={logo} onClick={() =>  navigate(`/`)}/>
       <div ref={mapContainer} className="map-container" >
        <div className={'search-box-container map-search-container'}>
          <Autocomplete
@@ -212,6 +217,17 @@ const StyledPopup = styled.div`
   padding: 5px;
   border-radius: 2px;
 `;
+
+const LogoImage = styled.img`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 64px;
+  background-color: white;
+  border-radius: 50px;
+  z-index: 10;
+  cursor: pointer;
+`
 
 
 export {SearchMap};
