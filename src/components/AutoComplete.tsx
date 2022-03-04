@@ -32,7 +32,7 @@ export function Autocomplete({fetchFeatures, ...props}:any) {
 
     const search = autocomplete({
       container: containerRef.current,
-      placeholder: 'Search for places',
+      placeholder: 'What are you looking for today?',
       renderer: { createElement, Fragment },
       openOnFocus: true,
       render({ children }:any, root) {
