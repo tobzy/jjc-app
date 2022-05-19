@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 // @ts-ignore
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import logo from "../assets/images/icon.png";
-import {useNavigate} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 const accessToken = 'pk.eyJ1IjoiampjLWRldiIsImEiOiJja3d1ZDQ5OTQxbTVrMm9ydHZ5OWExaW1qIn0.I6DlyCqTnk-Plz6r--IsyA';
 const flyToOptions = {
@@ -56,7 +56,7 @@ function SearchMap() {
   const [searchedMapFeatures, setSearchedMapFeatures] = useState<any[]>([]);
   const [selectedFeature, setSelectedFeature] = useState<any>(undefined);
   const urlQuery = new URL(window.location.href).searchParams.get('q');
-  let navigate = useNavigate();
+  const history = useHistory();
 
 
   const getLocation = () => {
@@ -146,7 +146,7 @@ function SearchMap() {
   }
   return (
     <div className="App" id='map_Container'>
-      <LogoImage src={logo} onClick={() =>  navigate(`/`)}/>
+      <LogoImage src={logo} onClick={() => history.push('/')}/>
       <div ref={mapContainer} className="map-container" >
        <div className={'search-box-container map-search-container'}>
          <Autocomplete

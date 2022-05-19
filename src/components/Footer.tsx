@@ -78,6 +78,7 @@ export const Footer = () => {
                 <Section3>
                     <a href={'https://www.privacypolicygenerator.info/live.php?token=FxZDeYS0mtNtufoZ7y2eKshAnsEaOyKr'} target={'_blank'}>About Us</a>
                     <a href={'https://www.privacypolicygenerator.info/live.php?token=FxZDeYS0mtNtufoZ7y2eKshAnsEaOyKr'} target={'_blank'}>Privacy Policy</a>
+                    <a href={'/login'}>Admin Login</a>
                     {/*<p>Services</p>*/}
                     {/*<p>Countries</p>*/}
                     {/*<p>Carrers</p>*/}

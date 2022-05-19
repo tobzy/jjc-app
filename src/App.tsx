@@ -1,19 +1,28 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
-import {Home} from "./screens/Home";
-import {SearchMap} from "./screens/Map";
+import { useQueryClient } from 'react-query';
+import { AppAuthenticated } from './AppAuthenticated';
+import { AppUnauthenticated } from './AppUnauthenticated';
+import { useAuth } from './context/auth-context';
+import { Loading } from './components/Loading';
 
 function App() {
 
-  const mapContainer = useRef(null)
+  const mapContainer = useRef(null);
+  const { appUser, userRole } = useAuth();
+  const [userReady, setUserReady] = useState(false);
+  const queryClient = useQueryClient();
+
   const map = useRef(null);
   const [lng, setLng] = useState(3.909892);
   const [lat, setLat] = useState(7.436598);
+
+  useEffect(() => {
+    // Check if user data has been loaded before rendering for smoother page load and for analytics initialization
+    if (!!userRole && !!appUser?.user) {
+      setUserReady(true);
+    }
+  }, [userRole, appUser]);
 
   useEffect(() => {
     getLocation();
@@ -27,20 +36,19 @@ function App() {
     }
   }
   const showPosition = (position:GeolocationPosition) =>{
-    console.log([position.coords.latitude, position.coords.longitude])
     setLat(position.coords.latitude);
     setLng(position.coords.longitude);
   }
-  return (
-    <div className="App"><Router>
-      <Routes>
-        <Route path="/search"   element={ <SearchMap />}/>
-        <Route path="/" element={<Home/>} />
-      </Routes>
-    </Router>
 
-    </div>
-  );
+  if (appUser) {
+    return userReady && userRole ? (
+      <AppAuthenticated />
+    ) : (
+      <Loading />
+    );
+  }
+
+  return <AppUnauthenticated />;
 }
 
 

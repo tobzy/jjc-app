@@ -3,7 +3,7 @@ import React, { createElement, Fragment, useEffect, useRef } from 'react';
 import { render } from 'react-dom';
 import {MapService} from "../services/map-service";
 import {AutoCompleteItem} from "./AutoCompleteItem";
-import {useNavigate} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {createLocalStorageRecentSearchesPlugin} from "@algolia/autocomplete-plugin-recent-searches";
 import {debouncePromise} from "../lib/utils";
 
@@ -14,7 +14,8 @@ const debounced = debouncePromise((items:any) => Promise.resolve(items), 300);
 
 export function Autocomplete({fetchFeatures, ...props}:any) {
   const containerRef = useRef(null);
-  let navigate = useNavigate();
+  const history = useHistory();
+
 
 
 
@@ -22,7 +23,7 @@ export function Autocomplete({fetchFeatures, ...props}:any) {
     if(fetchFeatures){
       fetchFeatures(searchUrl)
     }
-    navigate(`/search?q=${searchUrl}`);
+    history.push(`/search?q=${searchUrl}`);
   }
 
   useEffect(() => {
@@ -50,7 +51,7 @@ export function Autocomplete({fetchFeatures, ...props}:any) {
           if(fetchFeatures){
             fetchFeatures(itemUrl)
           }
-          navigate(`/search?q=${itemUrl}`);
+          history.push(`/search?q=${itemUrl}`);
         },
       },
       onStateChange({ state }) {
