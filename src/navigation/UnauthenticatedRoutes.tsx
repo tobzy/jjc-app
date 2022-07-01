@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { Switch, Route, Redirect, RouteProps, useLocation } from 'react-router-dom';
 import { Login } from '../screens/Login';
 import { PageNotFound } from '../screens/common/PageNotFound';
-import {Home} from "../screens/Home";
+// import {Home} from "../screens/Home";
 import {LandingPage} from "../screens/LandingPage";
-import {SearchMap} from "../screens/Map";
+// import {SearchMap} from "../screens/Map";
 import { GUEST_ROUTE } from '../lib/constants';
 
 /**
@@ -70,11 +70,11 @@ export const guestRoutes: RouteProps[] = [
     exact: true,
     component: PageNotFound,
   },
-  {
-    path: GUEST_ROUTE.SEARCH,
-    exact: true,
-    component: SearchMap,
-  },
+  // {
+  //   path: GUEST_ROUTE.SEARCH,
+  //   exact: true,
+  //   component: SearchMap,
+  // },
   {
     path: GUEST_ROUTE.HOME,
     exact: true,

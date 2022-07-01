@@ -144,6 +144,7 @@ function SearchMap() {
     setSelectedFeature(undefined);
 
   }
+  // @ts-ignore
   return (
     <div className="App" id='map_Container'>
       <LogoImage src={logo} onClick={() => history.push('/')}/>
@@ -182,8 +183,7 @@ function SearchMap() {
           {searchedMapFeatures?.map((feature, index) => (
             <Marker
               key={feature.id}
-              onClick={(featureClickEvent) => {
-                console.log(featureClickEvent)
+              onClick={(featureClickEvent:Event) => {
                 markerClick(feature)
               }}
               coordinates={[feature?.location.longitude,feature?.location.latitude]}
@@ -192,6 +192,7 @@ function SearchMap() {
             </Marker>
           ))}
           {selectedFeature && (
+            //@ts-ignore
             <Popup key={selectedFeature?.id} coordinates={[selectedFeature.location.longitude, selectedFeature.location.latitude]}>
               <StyledPopup>
                 <div className={'popup-title'}>{selectedFeature.name}</div>
