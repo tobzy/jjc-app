@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Container, Grid } from '@mantine/core';
 import { LoginForm } from '../components/LoginForm';
-// import { Logo } from '../components/Logo';
 
 const Screen = styled(Container)`
   min-height: 100vh;
@@ -20,48 +19,10 @@ const LoginContainer = styled(Grid)`
   justify-content: center;
 `;
 
-const LeftPane = styled(Grid.Col)`
-  background-color: ${({ theme }) => theme.colors.secondary.lightgrey};
-  justify-content: center;
-  display: flex;
-  align-items: center;
-`;
-
 const RightPane = styled(Grid.Col)`
   justify-content: center;
   display: flex;
   align-items: center;
-`;
-
-const LogoPanel = styled.div`
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 40px;
-  width: 100%;
-  height: 80px;
-  align-items: center;
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  > img {
-    flex: 0;
-  }
-`;
-
-const CallToAction = styled.h2`
-  font-size: 28px;
-  font-family: 'Glacial Indifference-Bold', sans-serif;
-  text-align: center;
-
-  .green {
-    font-family: 'Glacial Indifference-Bold', sans-serif;
-    color: #279f70; // TODO: Add this color to theme
-  }
 `;
 
 const LoginWrapper = styled.div`
@@ -83,9 +44,6 @@ export const Login = () => {
 
   return (
     <Screen fluid>
-      {/*<LogoPanel>*/}
-      {/*  <Logo imageWidth={100} />*/}
-      {/*</LogoPanel>*/}
       <LoginContainer>
         <RightPane md={6} sm={12}>
           <LoginWrapper>

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #F5F4F3;
 }
 
 code {
@@ -14,23 +15,23 @@ code {
 
 * {
   font-family: 'Glacial Indifference-Regular', sans-serif;
+  box-sizing: border-box;
 }
 
 
 @font-face {
-  font-family: 'Glacial Indifference-Regular';
+  font-family: 'Circular-Std';
   font-weight: 400;
-  src: url('./assets/fonts/GlacialIndifference-Regular.otf');
-  src: local("Glacial Indifference-Regular"), local("Glacial Indifference"),
-  url('./assets/fonts/GlacialIndifference-Regular.otf')
+  src: url('./assets/fonts/CircularStd-Book.otf');
+  src: local("Circular-Std"), local("Circular-Std"),
+  url('./assets/fonts/CircularStd-Book.otf')
 }
 
 @font-face {
-  font-family: 'Glacial Indifference-Bold';
-  font-weight: 600;
-  src: url('./assets/fonts/GlacialIndifference-Bold.otf');
-  src: local("Glacial Indifference-Bold"), local("Glacial Indifference"),
-  url('./assets/fonts/GlacialIndifference-Bold.otf')
+  font-family: 'Circular-Std-Bold';
+  src: url('./assets/fonts/CircularStd-Bold.otf');
+  src: local("Circular-Std-Bold"), local("Circular-Std-Bold"),
+  url('./assets/fonts/CircularStd-Bold.otf')
 }
 
 input:-webkit-autofill,

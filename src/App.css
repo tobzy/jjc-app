@@ -75,3 +75,8 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+
+iframe {
+  pointer-events: none;
+}

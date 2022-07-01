@@ -1,38 +1,14 @@
 import { MantineThemeOverride } from '@mantine/core';
 
-declare module 'styled-components' {
-  export interface DefaultTheme {
-    colors: {
-      primary: {
-        green: string;
-        black: string;
-        darkgrey: string;
-        grey: string;
-        lightgrey: string;
-        white: string;
-        blue: string;
-        purple: string;
-        yellow: string;
-      };
-      secondary: {
-        red: string;
-        blue: string;
-        lightgreen: string;
-        yellow: string;
-        lightgrey: string;
-        grey: string;
-        darkgreen: string;
-        secondaryGrey: string;
-      };
-    };
-  }
-}
+
 
 export const lightTheme = {
   colors: {
     primary: {
       green: '#71C64D',
       black: '#1A242D',
+      dark: '#2c2c2c',
+      midGrey: '#7A7C7C',
       darkgrey: '#4F4F4F',
       grey: '#828282',
       lightgrey: '#FAFAFA',

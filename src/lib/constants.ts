@@ -196,3 +196,8 @@ export const chartSelectStyles: Partial<Record<BaseSelectStylesNames, CSSObject>
     fontSize: 12,
   },
 };
+
+
+export const colors = {
+  primaryDark:'#2c2c2c'
+}
