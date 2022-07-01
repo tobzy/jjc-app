@@ -18,7 +18,7 @@ export const AuthenticatedRoutes = (): JSX.Element => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location.pathname]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [location.pathname]);
   // if (userRole === USER_ROLES.ADMIN) {
   if (userRole) {
     return (

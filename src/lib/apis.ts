@@ -1,5 +1,3 @@
-/* eslint no-param-reassign: ["error", { "props": false }] */
-
 import axios, { AxiosRequestConfig } from 'axios';
 import { QueryCache } from 'react-query';
 import {JJC_API, MAIN_API, SECURE_MAIN_API} from './apiConstants';
