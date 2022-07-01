@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { LoadingOverlay } from '@mantine/core';
 import { Column } from 'react-table';
 import { useState } from 'react';
 import { Location } from '../../services/location-service';
-import {columnConfig, LocationRow} from '../location/table-config';
+import {columnConfig} from './table-config';
 import { useGetLocations } from '../../hooks/useMapping';
 import { LocationsTable } from '../../components/tables/PaginatedTable';
 

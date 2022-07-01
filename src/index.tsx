@@ -20,7 +20,7 @@ ReactDOM.render(
           </Suspense>
           <ToastContainer
             autoClose={4000}
-            hideProgressBar
+             hideProgressBar
             newestOnTop={false}
             closeOnClick
             rtl={false}

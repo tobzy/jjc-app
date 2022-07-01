@@ -3,6 +3,7 @@ import { Switch, Route, Redirect, RouteProps, useLocation } from 'react-router-d
 import { Login } from '../screens/Login';
 import { PageNotFound } from '../screens/common/PageNotFound';
 import {Home} from "../screens/Home";
+import {LandingPage} from "../screens/LandingPage";
 import {SearchMap} from "../screens/Map";
 import { GUEST_ROUTE } from '../lib/constants';
 
@@ -77,6 +78,6 @@ export const guestRoutes: RouteProps[] = [
   {
     path: GUEST_ROUTE.HOME,
     exact: true,
-    component: Home,
+    component: LandingPage,
   },
 ];

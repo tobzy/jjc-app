@@ -50,7 +50,7 @@ export const AnimatedLabelInput = forwardRef(
     { className, label, isPassword, name, isLabelAnimated = true }: IAnimatedLabelInputProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
-    const [inputValue, setValue] = useState('');
+    const [inputValue, setValue] = useState<string>('');
     const type = isPassword ? 'password' : 'text';
     // removed controlled input because react-hook-form uses refs to control/grab the value
     return (
