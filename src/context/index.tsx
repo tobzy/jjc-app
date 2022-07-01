@@ -34,8 +34,10 @@ const queryClient = new QueryClient({
   },
 });
 
-export const AppProviders: FunctionComponent = ({ children }) => (
+
+export const AppProviders = ({ children }:any) => (
   <Suspense fallback={<Loading />}>
+    {/* @ts-ignore*/}
     <QueryClientProvider client={queryClient}>
       <div>
         <Router>

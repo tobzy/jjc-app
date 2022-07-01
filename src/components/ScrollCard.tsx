@@ -7,7 +7,7 @@ interface ICardProps {
   title: string;
   text: string;
   image: string;
-  image2: string;
+  image2?: string;
   link?: string;
 }
 
@@ -71,7 +71,7 @@ export const Paragraph = styled(Text)`
   text-align: left;
 `;
 
-const Img = styled.div<{ image: string; image2: string }>`
+const Img = styled.div<{ image: string; image2?: string }>`
   flex: 1;
   height: 273px;
   width: 70%;

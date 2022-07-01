@@ -37,7 +37,7 @@ export const columnConfig: Column<Location>[] = [
   },
   {
     Header: 'Categories',
-    accessor: 'categories',
+    accessor: 'categories',// @ts-ignore
     Cell: (props) => props.value?.join(", ") || '',
   },
   {
@@ -55,7 +55,7 @@ export const columnConfig: Column<Location>[] = [
   },
   {
     Header: 'Keywords',
-    accessor: 'keywords',
+    accessor: 'keywords',// @ts-ignore
     Cell: (props) => props.value?.join(", ") || '',
   },
   {
