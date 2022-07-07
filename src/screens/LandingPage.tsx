@@ -2,7 +2,11 @@ import React from 'react';
 import walking from '../assets/images/walking.svg';
 import circles from '../assets/images/circles.svg';
 import caps from '../assets/images/caps.svg';
+import shop from '../assets/images/shop.svg';
+import arrows from '../assets/images/arrrows.svg';
+import shopsquare from '../assets/images/shop-square.svg';
 import capsquare from '../assets/images/caps-square.svg';
+import arrowsquare from '../assets/images/arrows-square.svg';
 import jjcCoin from '../assets/images/jjc-coin.png';
 import jjcMap from '../assets/images/jjc-map.png';
 import location from '../assets/images/location.svg';
@@ -16,6 +20,8 @@ import './landingPage.css';
 import styled from 'styled-components';
 import { device } from '../lib/utils';
 import { Heading } from '../components/styled';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 export const LandingPage = () => (
   <Container>
@@ -44,12 +50,27 @@ export const LandingPage = () => (
       />
     </Section2>
 
-    <ScrollCard
-      title="JJC Dey for You"
-      text="They said, you will see a man wearing a red cap at the end of the street. Now you have reached, there are 3 men wearing red caps."
-      image={caps}
-      image2={capsquare}
-    />
+    <Carousel autoPlay infiniteLoop interval={3500} showStatus={false}>
+      <ScrollCard
+        title="JJC Dey for You"
+        text="They said, you will see a man wearing a red cap at the end of the street. Now you have reached, there are 3 men wearing red caps."
+        image={caps}
+        image2={capsquare}
+      />
+      <ScrollCard
+        title="JJC Dey for You"
+        text="They said,go to the shop by the corner and ask for Mr. Wasiu. But you walked all the way there to find that Mr. Wasiu is not around."
+        image={shop}
+        image2={shopsquare}
+      />
+      <ScrollCard
+        title="JJC Dey for You"
+        text="They said,stop at the 2nd junction after the transformer.But there’s a smaller street closeby and now you are left wondering, which one?"
+        image={arrows}
+        image2={arrowsquare}
+      />
+    </Carousel>
+
 
     <Section2>
       <Card title="Exchange JJC Coins" text="Get discounts and valuable offers with your JJC Coins." image={jjcCoin} />
